@@ -1,34 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Hero, PopularProducts, SuperQuality, Services, SpecialOffer, CustomerReviews, Subscribe, Footer } from "./sections";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () =>  (
+  <main className="relative ">
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    {/* <Nav/> */}
+    
+    <section className="xl:padding-l wide:padding-r padding-b">
+      <Hero/>
+    </section>
 
-export default App
+    <section className="padding ">
+      <PopularProducts/>
+    </section>
+
+    <section className="padding ">
+      <SuperQuality/>
+    </section>
+
+    <section className="padding-x py-10 ">
+      <Services/>
+    </section>
+
+    <section className="padding ">
+      S<SpecialOffer/>
+    </section>
+
+    <section className="padding bg-pale-blue">
+      <CustomerReviews/>
+    </section>
+
+    <section className="padding-x sm:py-32 py-16 w-full">
+      <Subscribe/>
+    </section>
+
+    <section className="padding bg-black padding-x padding-t pb-8 text-white">
+      <Footer/>
+    </section>
+
+
+    
+
+  </main>
+);
+
+export default App;
