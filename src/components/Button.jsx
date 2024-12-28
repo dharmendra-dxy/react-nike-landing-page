@@ -1,6 +1,6 @@
 import React from 'react'
 
-const button = ({label, iconURL,backgroundColor,borderColor,textColor}) => {
+const button = ({label, iconURL,backgroundColor,borderColor,textColor, fullWidth}) => {
 
   return (
 
@@ -9,6 +9,9 @@ const button = ({label, iconURL,backgroundColor,borderColor,textColor}) => {
         ${
           backgroundColor ? `${backgroundColor} ${borderColor} ${textColor}` : `bg-coral-red  text-white border-coral-red` 
         } 
+        ${
+          fullWidth && 'w-full'
+        }
       `} >
 
         {label}
